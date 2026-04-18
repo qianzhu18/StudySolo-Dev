@@ -9,6 +9,7 @@ import {
   type NodeMouseHandler,
   useReactFlow,
   SelectionMode,
+  PanOnScrollMode,
   ReactFlowProvider,
   reconnectEdge,
   type Edge,
@@ -196,7 +197,8 @@ function WorkflowCanvasInner() {
         onEdgeClick={handleEdgeClick} onEdgeContextMenu={handleEdgeContextMenu}
         onNodeDragStart={() => useWorkflowStore.getState().takeSnapshot()}
         onNodeDragStop={handleNodeDragStop}
-        panOnScroll={false} zoomOnPinch panOnDrag={!isSelectMode} nodesDraggable
+        panOnScroll panOnScrollMode={PanOnScrollMode.Free} panOnScrollSpeed={1}
+        zoomOnScroll={false} zoomOnPinch panOnDrag={!isSelectMode} nodesDraggable
         selectionOnDrag={isSelectMode}
         selectionMode={isSelectMode ? SelectionMode.Partial : SelectionMode.Full}
         nodeDragThreshold={4} minZoom={0.2} maxZoom={2} proOptions={proOptions}

@@ -143,7 +143,7 @@ export const NodeResultSlip: React.FC<NodeResultSlipProps> = ({
       <>
         <div 
           ref={slipRef}
-          className={`node-result-slip mt-4 w-full bg-stone-50/40 dark:bg-stone-900/40 border border-dashed border-stone-200/60 dark:border-stone-800/60 rounded-md shadow-sm backdrop-blur-sm ${shadowClass}`}
+          className={`node-result-slip nowheel mt-4 w-full bg-stone-50/40 dark:bg-stone-900/40 border border-dashed border-stone-200/60 dark:border-stone-800/60 rounded-md shadow-sm backdrop-blur-sm ${shadowClass}`}
           onPointerDownCapture={(e) => {
             e.stopPropagation();
             onFocusSlip?.();
@@ -224,7 +224,7 @@ export const NodeResultSlip: React.FC<NodeResultSlipProps> = ({
   return (
     <div 
       ref={slipRef}
-      className={`node-result-slip mt-4 w-full rounded-md overflow-hidden bg-white/80 dark:bg-black/50 backdrop-blur-md shadow-sm border border-black/10 dark:border-white/10 relative z-50 transition-colors ${shadowClass}`}
+      className={`node-result-slip nowheel mt-4 w-full rounded-md overflow-hidden bg-white/80 dark:bg-black/50 backdrop-blur-md shadow-sm border border-black/10 dark:border-white/10 relative z-50 transition-colors ${shadowClass}`}
       onPointerDownCapture={(e) => {
         e.stopPropagation();
         onFocusSlip?.();
